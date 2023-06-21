@@ -3,6 +3,21 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Orbit&display=swap');
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+div {
+	margin: 0;
+	padding: 0;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,11 +30,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video 
-
-/* class "c.red"이고 p 태그인 선택자를 작성하시오. */
-p.c_red
-
+time, mark, audio, video
 {
 	margin: 0;
 	padding: 0;
@@ -27,4 +38,7 @@ p.c_red
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+ul {
+	list-style: none;
 }
