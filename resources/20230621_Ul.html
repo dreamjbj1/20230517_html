@@ -6,77 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <!-- <form>
-        <fieldset>
-            <legend>남품자정보</legend>
-            <ol>
-                <li>
-                    <label for="user-name"> 납품자명: </label>
-                    <input type="text" id="user-name" value="name">
-                </li>
-
-                <li>
-                    <label for="mail"> email: </label>
-                    <input type = "email" id="mail" value="answs@naver.com">
-                </li>
-
-                <li>
-                    <label for="url"> 홈페이지: </label>
-                    <input type = "url" id="url" value="http://">
-                </li>
-            </ol>
-        </fieldset>
-    </form>
     <form>
         <fieldset>
-            <legend>남품정보</legend>
+            <legend>남품자정보</legend>
+            <ol >
+                <li> 납품자명: <input type="text" id="name" required placeholder="name"></li>
+                <li> email: <input type="text" id="email" required placeholder="answs@naver.com"> </li>    
+                <li> 홈페이지: <input type="text" id="url" required palceholder="http://" ></li>   
+            </ol>
+        </fieldset>   
+        <fieldset>
+            <legend>납품정보</legend>
             <ul>
-                <li>
-                    <label for="user-name"> 상품명: </label>
-                    <input type="text" id="user-name" >
+                <li>상품명:
+                <input type="text" list="list"> 
+            <datalist id="list">
+                <option value= dog1004> 도그1004</option>
+                <option value= catchicken> 고양이치킨</option>
+                <option value= milk>우유</option>
+            </datalist>
+            </li>
+                <li>남품수량: <input type="text"
+                    
+                    <input type="number" min="10" max="100" placeholder="최소10이상">
                 </li>
                 <li>
-                    <label> 납품수량: </label>
-                    <input type="number" min="10" max="100" value="최소 10이상">
-                </li>
-                <li>
-                    <label for = "url"> 납품등급: </label>
-                    <input type = "url" id="url" value="http://">
+                    <label> 납품등급: </label>
+                    <input type = "range" min="0" max="10">
                 </li>
             </ul>
         </fieldset>
-    </form> -->
+    </form>
+
+
+ 
+    </fieldset>
     
-    <form>
+
+
+
+    
+     <!-- <form>
         <fieldset>
             <div>
-                <li>
-                    <label>회원여부 :</label>
-                <label><input type="radio" value="s_3" checked>회원</label>
-                <label><input type="radio" value="s_3">비회원</label>
                 
+                
+                <p>회원여부:<p>
+                <tr>
+                <td><input type="radio" name="member" id="member_y" checked>회원</td>
+                <td><input type="radio" name="member" id="member_n">비회원</td>
+                </tr>
                 <li>
-                    <label for="work">직업</label>
-                <select>
+                <p>취미(중복선택) :</p>
+                <label><input type="checkbox" checked>독서</label>
+                <label><input type="checkbox">영화</label>
+                <label><input type="checkbox">음악</label>
+                <label><input type="checkbox">스포츠</label>
+                </li>
+                
+                    <p>직업:</p>
+                    <label for="work">직업: </label>  -->
+                <!-- <select>
                     <option value="student">학생</option>
                     <option value="businessman">회사원</option>
                     <option value="teacher">교사</option>
                     <option value="self-employed">자영업</option>
                 </select>
-                </li>
-                <label for = "memo">남기고 싶은 말 :</label>
-                <textarea id="memo" cols="70" rows="5"></textarea>
+                
                 <li>
+                <p>남기고 싶은 말:</p> -->
+                <!-- <textarea cols="70" rows="5" placeholder="150자 내외로 글을 남겨주세요."></textarea> --> -->
+                <!-- <label for = "memo">남기고 싶은 말 :</label> -->
+                <!-- <textarea id="memo" cols="70" rows="5"></textarea>
+                <input type="text" placeholder="150자 내외로 글을 남겨주세요."> -->
+             <!-- </li> 
+            
                     <input type="reset" value="초기화">
                     <input type="submit" value="전송">
-                </li>              
-            </div> 
-        </fieldset>
-    </form>
+                                   
+            </div>  -->
+        <!-- </fieldset>
+    </form> 
 
    
 </body>
 
-</html>
+</html> -->
