@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // 고전 이벤트 모델, 표준 이벤트 모델은 비슷한데 ()는 쓰지 않는다. 
+    // 인라인 이벤트 모델 - <button onclick="함수명();"></button> >>  ()꼭 써줘야한다.
+</body>
+</html>
+
+HTML onclick 호출되면 this == window객체, js onclick 호출되면 this = 클릭된 element 객체

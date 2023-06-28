@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         fieldset {
-            width: 700px;
+            width: 920px;
         }
 
         p {
@@ -24,13 +24,15 @@
         table,
         td,
         th {
+            width: 950px;
+            height: 10px;
             border: 1px solid black;
         }
 
-        ;
+        ;   
 
         table {
-
+            width: 750px;
             border: 2px solid #ffffff;
             border-collapse: collapse;
         }
@@ -50,15 +52,18 @@
             text-align: center;
         }
 
-        div {
-            align-text: center;
+        div{
+            text-align: center;
         }
+        
+   
     </style>
 </head>
 
 <body>
     <form>
         <h1><b>포트폴리오 문제 </b></h1>
+        <hr width=945px align="left">
         <fieldset>
             <legend>공지사항 작성하기</legend>
             <ul>
@@ -68,7 +73,7 @@
                 </li>
                 <li>
                     <p><label for="memo">내용</label>
-                        <textarea name="contenes" cols="28" rows="8" placeholder="내용을 입력하시오."></textarea>
+                        <textarea name="contents" cols="28" rows="8" placeholder="내용을 입력하시오."></textarea>
                     </p>
                 </li>
                 <li>
@@ -81,6 +86,7 @@
             </div>
         </fieldset>
     </form>
+    <hr width=945px align="left">
 
 
     <form action="insert.no">
@@ -97,8 +103,8 @@
             <tbody>
                 <tr>
                     <td>9</td>
-                    <td colspan="2">공지사항제목9</td>
-                    <td> <button><a href="#">바로가기</a></button></td>
+                    <td>공지사항제목9</td>
+                    <td><button>바로가기</button></td>
                     <td>user01</td>
                     <td>2021-03-29</td>
                     <td>34</td>
@@ -107,8 +113,8 @@
             <tbody>
                 <tr>
                     <td>6</td>
-                    <td colspan="2">공지사항제목6</td>
-                    <td><button><a href="#">바로가기</a></button></td>
+                    <td>공지사항제목6</td>
+                    <td><button>바로가기</button></td>
                     <td>answ445</td>
                     <td>2021-03-12</td>
                     <td>67</td>
@@ -117,8 +123,8 @@
             <tbody>
                 <tr>
                     <td>3</td>
-                    <td colspan="2">공지사항제목3</td>
-                    <td><button><a href="#">바로가기</a></button></td>
+                    <td>공지사항제목3</td>
+                    <td><button>바로가기</button></td>
                     <td>testg12</td>
                     <td>2021-03-01</td>
                     <td>98</td>
@@ -127,8 +133,8 @@
             <tbody>
                 <tr>
                     <td>2</td>
-                    <td colspan="2">공지사항제목2</td>
-                    <td><button><a href="#">바로가기</a></button></td>
+                    <td>공지사항제목2</td>
+                    <td><button>바로가기</button></td>
                     <td>palwe3</td>
                     <td>2021-01-02</td>
                     <td>85</td>
@@ -137,17 +143,18 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td colspan="2">공지사항제목1</td>
-                    <td><button><a href="#">바로가기</a></button></td>
+                    <td>공지사항제목1</td>
+                    <td><button>바로가기</button></td>
                     <td>xml23</td>
                     <td>2020-01-02</td>
                     <td>124</td>
                 </tr>
+                <tr>
+                    <th colspan="4">전체공지사항 개수</th>
+                    <th colspan="2">5개</th>
+                </tr>
             </tbody>
-            <tr>
-                <th colspan="4">전체공지사항 개수</th>
-                <th colspan="2">5개</th>
-            </tr>
+        
 
         </table>
     </form>
