@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        a[target = "_black"]{
-            padding-right: 30px;
-            background: url(images/newwindow.png) no-repeat center right;
+        ul{
+            list-style-type: none;
+        }
+        .navi ul li {
+            float: left;
+            width: 150px;
+            padding: 10px;
+        }
+
+        .navi a:link, .navi a:visited {
+            display: block;
+            font-size: 14px;
+            color: #000;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navi a:hover, .navi a:focus {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .navi a:active {
+            background-color: #f00;
+        }
+
+        #intro:target {
+            background-color: #0069e0;
+            color: #fff;
         }
         /* ul{
             list-style-type: none;
@@ -24,12 +52,26 @@
         /* section p {color:blue;} */
     </style>
 </head>
+
 <body>
-    <ul>
-        <li><a href="http://html.spec.whatwg.org" target="_black">HTML</a></li>
-        <li><a href="#">CSS Selector Level 3</a></li>
-        <li><a href="#">미디어쿼리</a></li>
-    </ul>
+    <nav class="navi">
+        <ul>
+            <li><a href="#">이용 안내</a></li>
+            <li><a href="#">객실 소개</a></li>
+            <li><a href="#">예약 방법 및 요금</a></li>
+            <li><a href="#">예약하기</a></li>
+        </ul>
+    </nav>
+    <div id="intro" class="contents">
+        <h2>이용 안내</h2>
+
+    </div>
+    <div id="room" class="contents">
+        <h2>객실 소개</h2>
+    </div>
+    <div id="reservation" class="contents">
+        <h2>예약 방법 및 요금</h2>
+    </div>
     <!-- <ul>
         <li><a>메인 메뉴 : </a></li>
         <li><a href="#">메뉴 1</a></li>
@@ -49,6 +91,7 @@
             <p>도미토리(4인 공용) : 25,000원/일</p>
         </div>
     </section> -->
-    
+
 </body>
+
 </html>
