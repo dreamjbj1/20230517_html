@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <ul>
+        <li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Green</a></li>
+        <li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Orange</a></li>
+        <li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Purple</a></li>
+    </ul> 
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">Green</a></li>      
+        <li><a href="#" onclick="changeBg('green')">Orange</a></li>       
+        <li><a href="#" onclick="changeBg('green')">Purple</a></li>
+    </ul>
+    <div id="result"></div>
+
+    <script>
+        function changeBg(color) {
+            var result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+    </script>
+    <script>
+        // var num1 = 2;
+        // var num2 = 3;
+        // var sum = num1 + num2;
+        // alert("결괏값 : " + sum);
+        // addNumber();
+        // addNumber();
+
+        // function addNumber() {
+        //     var sum = 10 + 20;
+        //     multi = 10 * 20;
+        // }
+        // addNumber();
+        // console.log(multi);
+        
+        // function calcSum(n) {
+        //     let sum = 0;
+        //     for(let i = 1; i < n + 1; i++) {
+        //         sum += i;
+        //     }
+        //     console.log(sum);
+        // }
+        // calcSum(10);
+            
+    </script>
+</body>
+</html>
