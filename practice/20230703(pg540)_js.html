@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <img src="/resources/images/cat.jpg" alt="">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<style>
+    /* #change{
+
+    } */
+
+    /* #result{
+        width: 150px;
+        height: 100px;
+        background-color: orange;
+    } */
+</style>
+
+<body>
+    <div id="item">
+        <img src="images/cat.jpg" alt">
+        <button class="over" id="open">상세 설명 보기</button>
+        <div id="desc" class="detail">
+            <h4>등심붓꽃</h4>
+            <p>북아메리카 원산으로 ... 번식한다</p>
+            <button id="close">상세 설명 닫기</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#open').onclick = function() {
+            document.querySelector('#desc').style.display = "block";
+            document.querySelector('#open').style.display = "none";
+        }
+        document.querySelector('#close').onclick = function() {
+            document.querySelector('#desc').style.display = "none";
+            document.querySelector('#open').style.display = "block";
+        }
+    </script>
+
+    <!-- <button id="change">글자색 바꾸기</button>
+    <p>Reprehenderit...labfjbkljbalknmtlkangg</p>
+    
+    <script>
+        var changeBttn = document.querySelector("#change");
+        changeBttn.onclick = changeColor;
+
+        function changeColor() {
+            document.querySelector("p").style.color = "blue";
+        } 
+    </script>
+    <!-- // 버튼을 클릭하면 배경색 바꾸기 -->
+    <!-- <ul>
+        <li><a href="#" onclick="changeBg('green')">Green</a></li>
+        <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+        <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+    </ul>
+<div id="result"></div> -->
+
+
+<!-- <script>
+    function changeBg(color) {
+        var result = document.querySelector('#result');
+        result.style.backgroundColor = color;
+    }
+</script> -->
+
+
+    <!-- // 버튼을 클릭하면 알림 창 표시하기 -->
+    <!-- <ul>
+        <li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Green</a></li>
+        <li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Orange</a></li>
+        <li><a href="#" onclick="alert('버튼을 클릭했습니다.')">Purple</a></li>
+    </ul> -->
+</body>
+</html>

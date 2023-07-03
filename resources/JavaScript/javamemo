@@ -12,3 +12,4 @@
 </html>
 
 HTML onclick 호출되면 this == window객체, js onclick 호출되면 this = 클릭된 element 객체
+display: flex; // 선택박스 가로로 넣는법
