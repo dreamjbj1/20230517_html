@@ -106,7 +106,7 @@
             </div>
             `;
             $(".checkedItems").append(htmlVal);
-            /* 10. 선택해제 이벤트 등록 - 이시점에 등록됨. appen 된 다음 */
+            /* 10. 선택해제 이벤트 등록 - 이시점에 등록해야함. appen 된 다음 */
             $(".btnUncheck").off("click");
             $(".btnUncheck").on("click", btnUncheckHandler);
         } 
@@ -127,13 +127,34 @@
     }
     /* 7. 반대선택 이벤트 처리 Handler */
     function revCheckHandler(e){
+        //  13. 반대선택 시 checkedItems 에도 적용 
+        //  checkedItems 모두 제거 -->  each돌면서 true 상태인 것들은 추가
+        // 
+        //  checkedItems 자식노드 모두 제거
+        $(".checkedItems").html("");
+
         // 반대선택 - item들의 checked 상태의 반대 적용
         $(".item").each(function(idx, item){
             // console.log(idx);
             // console.log(status);
             var status = $(item).prop("checked");
+            // 현재 status 상태의 반대 상태인 !status 을 설정함
             $(item).prop("checked", !status);
+
+            // true 상태인 것을은 추가
+            if(!status == true){
+            var dataid = $(item).parent().data("id");
+            var htmlVal = "";
+            htmlVal += `
+            <div data-id="${dataid}">
+                <span>${dataid}</span>
+                <button type="button" class="btnUncheck">선택해제</button>
+            </div>
+            `;
+            $(".checkedItems").append(htmlVal);
+            }
         });
+        
     }
 </script>
 
