@@ -4,38 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mp3 Player</title>
+    <title>회원가입</title>
     <style>
         body{
             background-color: #deeaf6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+            height: 100vh;
+            margin: 20px 0 50px;
+            border-collapse: collapse;
         }
+        fieldset{
+            margin-top: 20px;
+            background-color: #ededed;
+            width: 350px;
+            height: 350px;
+
+        }
+        
         table input{
-          
+            background-color: #ededed;
             border: none;
-            border: #ededed;
-            border-bottom: 1px dashed   black;
+            /* border: #ededed; */
+            border-bottom: 1px dashed black;
      }
 
-        button{
-            background-color: #c5e0b5;
+     .my_btn {
+        background-color: #c5e0b5;
+        color: black;
+        border: none;
+        padding: 10px 30px;
+        width: 150px;
         }
     </style>
 </head>
 <body>
-    <fieldset style="width: 500px;">    
+    <form action=""></form>
+    <fieldset>    
    <table>
-  
-    <tr>
+  `<tr>
         <td>아이디</td>
-        <td><input type="id" name="user_id"></td>
+        <td><input type="id" name="user_id" required></td>
     </tr>
     <tr>
         <td>패스워드</td>
-        <td><input type="password1" name="user_pwd1"></td>
+        <td><input type="password1" name="pwd1" required></td>
     </tr>
+
     <tr>
         <td>패스워드 확인</td>
-        <td><input type="password2" name="user_pwd2"></td>
+        <td><input type="password2" name="pwd2" required></td>
     </tr>
     <tr>
         <td>이메일</td>
@@ -46,11 +67,13 @@
         <td><input text="url" name="user_url"></td>
     </tr>
      <tr>
-        <td colspan="" align="center">
-            <input type="submit" value="가입." onClick="return check()">
+        <td>
+            <button class='my_btn'>가입</button>
         </td>
     </tr>
    </table>
 </fieldset>
+</form>
 </body>
+
 </html
