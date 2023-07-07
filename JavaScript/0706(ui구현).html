@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script>
+  
+        document.addEventListener("DOMContentLoaded", onloadedHandler);
+
+        function onloadedHandler() {
+            var passwordInput = document.querySelector("[type=password1]");
+            passwordInput.addEventListener("click", view);
+        }
+
+        function view() {
+            var passwdElement = document.querySelector(".hint");
+            passwdElement.style.visibility = "visible";
+        }
+
+
+
+    </script>
+
+    <style>
+        body {
+            background-color: #deeaf6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+            height: 100vh;
+            margin: 20px 0 50px;
+            border-collapse: collapse;
+        }
+
+        fieldset {
+            background-color: #ededed;
+            width: 450px;
+            height: 450px;
+
+        }
+
+        td {
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .hint {
+            visibility: hidden;
+            font-size: 10px;
+        }
+
+        table input {
+            background-color: #ededed;
+            border: none;
+            /* border: #ededed; */
+            border-bottom: 1px dashed black;
+            width: 300px;
+        }
+
+
+        .my_btn {
+            width: 100%;
+            background-color: #c5e0b5;
+            color: black;
+            border: none;
+            padding: 10px 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <form action="#" method="post" id="for_id"></form>
+
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="id" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="hidden"><sub>필수입력사항입니다.</sub></td>
+            </tr>
+
+            <tr>
+                <td>패스워드</td>
+                <td><input type="password1" name="pwd1" required></td>
+            <tr>
+                <td></td>
+                <td class="hint">영문자, 대/소문자 특수문자, 숫자 포함 8~32자</td>
+            </tr>
+            <td>패스워드 확인</td>
+            <td><input type="password2" name="pwd2" required></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input style="width: 140px;" type="email" name="mail">@<input style="width: 140px;" type="email"
+                        name="mail"></td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" class="address" name="addr1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" class="address" name="addr2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class='my_btn'>가입</button>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </fieldset>
+</body>
+
+</html>
