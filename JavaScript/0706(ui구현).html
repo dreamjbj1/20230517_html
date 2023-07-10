@@ -60,17 +60,11 @@
         }
     </style>
     <script>
-        // window.onload = function() {
-        //     $("#fid").blur(function() {
-        //         console.log("aa")
-        //         consloe.log($)
-        //     })
-        // }
-        window.onload = function() {
+       window.onload = function() {
             $("#fid").blur(function(){
-               console.log("fid blur");
-               console.log($("#fid").val().length);
-               if($("#fid").val().length < 1){
+               console.log("aa");
+               console.log($("#fid").val());
+               if($("#fid").val() < 1){
                    $(".hidden.fid").css("visibility", "visible");
                } else {
                     $(".hidden.fid").css("visibility", "hidden");
@@ -100,6 +94,42 @@
                 $(".hint").css("visibility", "visible");
             });
         };
+        
+
+        // window.onload = function() {
+        //     $("#fid").blur(function(){
+        //        console.log("fid blur");
+        //        console.log($("#fid").val().length);
+        //        if($("#fid").val().length < 1){
+        //            $(".hidden.fid").css("visibility", "visible");
+        //        } else {
+        //             $(".hidden.fid").css("visibility", "hidden");
+        //        }
+        //     });
+        //     $("#fpw").blur(function(){
+        //         console.log("fpw blur");
+        //         if($("#fpw").val().length < 1){
+        //             $(".hidden.fpw").css("visibility", "visible");
+        //             $(".hint").css("visibility", "hidden");
+        //         } else {
+        //             $(".hidden.fpw").css("visibility", "hidden");
+        //         }
+        //     });
+
+        //     $("#fpwc").blur(function(){
+        //         console.log("fpwc blur");
+        //         if($("#fpwc").val().length < 1){
+        //             $(".hidden.fpwc").css("visibility", "visible");
+        //         }else {
+        //             $(".hidden.fpwc").css("visibility", "hidden");
+        //         }
+               
+        //     });
+        //     $("#fpw").click(function(){
+        //         console.log("fpw click");
+        //         $(".hint").css("visibility", "visible");
+        //     });
+        // };
         
 
 
