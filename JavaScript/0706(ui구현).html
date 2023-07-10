@@ -6,24 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <script>
-  
-        document.addEventListener("DOMContentLoaded", onloadedHandler);
-
-        function onloadedHandler() {
-            var passwordInput = document.querySelector("[type=password1]");
-            passwordInput.addEventListener("click", view);
-        }
-
-        function view() {
-            var passwdElement = document.querySelector(".hint");
-            passwdElement.style.visibility = "visible";
-        }
-
-
-
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <style>
         body {
             background-color: #deeaf6;
@@ -40,7 +23,7 @@
         fieldset {
             background-color: #ededed;
             width: 450px;
-            height: 450px;
+            height: 550px;
 
         }
 
@@ -76,33 +59,96 @@
 
         }
     </style>
+    <script>
+        // window.onload = function() {
+        //     $("#fid").blur(function() {
+        //         console.log("aa")
+        //         consloe.log($)
+        //     })
+        // }
+        window.onload = function() {
+            $("#fid").blur(function(){
+               console.log("fid blur");
+               console.log($("#fid").val().length);
+               if($("#fid").val().length < 1){
+                   $(".hidden.fid").css("visibility", "visible");
+               } else {
+                    $(".hidden.fid").css("visibility", "hidden");
+               }
+            });
+            $("#fpw").blur(function(){
+                console.log("fpw blur");
+                if($("#fpw").val().length < 1){
+                    $(".hidden.fpw").css("visibility", "visible");
+                    $(".hint").css("visibility", "hidden");
+                } else {
+                    $(".hidden.fpw").css("visibility", "hidden");
+                }
+            });
+
+            $("#fpwc").blur(function(){
+                console.log("fpwc blur");
+                if($("#fpwc").val().length < 1){
+                    $(".hidden.fpwc").css("visibility", "visible");
+                }else {
+                    $(".hidden.fpwc").css("visibility", "hidden");
+                }
+               
+            });
+            $("#fpw").click(function(){
+                console.log("fpw click");
+                $(".hint").css("visibility", "visible");
+            });
+        };
+        
+
+
+        // document.addEventListener("DOMContentLoaded", onloadedHandler);
+
+        // function onloadedHandler() {
+        //     var passwordInput = document.querySelector("[type=password1]");
+        //     passwordInput.addEventListener("click", view);
+        // }
+
+        // function view() {
+        //     var passwdElement = document.querySelector(".hint");
+        //     passwdElement.style.visibility = "visible";
+        // }
+
+    </script>
 </head>
 
 <body>
     <fieldset>
-        <form action="#" method="post" id="for_id"></form>
-
+        <form action="#" method="post">
         <table>
             <tr>
                 <td>아이디</td>
-                <td><input type="text" name="id" required></td>
+                <td><input class="id" type="text" name="id" id="fid" required></td>
             </tr>
             <tr>
                 <td></td>
-                <td class="hidden"><sub>필수입력사항입니다.</sub></td>
+                <td class="hidden fid"><sub>필수입력사항입니다.</sub></td>
             </tr>
-
             <tr>
                 <td>패스워드</td>
-                <td><input type="password1" name="pwd1" required></td>
+                <td><input type="password1" id="fpw" name="pwd1" required></td>
             <tr>
+                <tr>
+                    <td></td>
+                    <td class="hidden fpw"><sub>필수입력사항입니다.</sub></td>
+                </tr>
                 <td></td>
                 <td class="hint">영문자, 대/소문자 특수문자, 숫자 포함 8~32자</td>
             </tr>
             <td>패스워드 확인</td>
-            <td><input type="password2" name="pwd2" required></td>
+            <td><input type="password2" id="fpwc" name="pwd2" required></td>
             </tr>
             <tr>
+                <tr>
+                    <td></td>
+                    <td class="hidden fpwc"><sub>필수입력사항입니다.</sub></td>
+                </tr>
                 <td>이메일</td>
                 <td><input style="width: 140px;" type="email" name="mail">@<input style="width: 140px;" type="email"
                         name="mail"></td>
