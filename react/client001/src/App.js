@@ -8,19 +8,84 @@ import './App.css';
 // import LifecycleEx from './R007_LifecycleEx';
 // import LifecycleEx from './R008_LifecycleEx';
 // import Es6 from './R009_Es6'
-import Variable from './R010_Variable'
+// import Variable from './R010_Variable'
+// import SpreadOperator from './R011_SpreadOperator'
+// import ClassPrototype from './R012_Class&Prototype'
+// import ArrowFunc from './R013_ArrowFunction'
+// import ForEach from './R014_ForEach'
+// import Map from './R015_Map'
+import Jquery from './R016_Jquery'
 
 function App() {
- 
-// 10번
+// 16번
 return (
   <div className="App">
       <h1>Start React 200!</h1>
       <p>CSS 적용하기</p>
-      <Variable/>
+      <Jquery/>
   </div>
 );
-}
+} 
+
+// 15번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <Map/>
+//   </div>
+// );
+// } 
+
+// 14번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <ForEach/>
+//   </div>
+// );
+// } 
+
+// 13번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <ArrowFunc/>
+//   </div>
+// );
+// } 
+
+// 12번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <ClassPrototype/>
+//   </div>
+// );
+// } 
+
+// 11번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <SpreadOperator/>
+//   </div>
+// );
+// } 
+
+// 10번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <Variable/>
+//   </div>
+// );
+// }
 
 // 9번
 //    return (
