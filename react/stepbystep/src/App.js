@@ -42,7 +42,6 @@ function App() {
   }
   const List = ()=>{
     return (
-     
       <>
         <h1>과일목록</h1>
         <nav>
@@ -85,8 +84,8 @@ function App() {
 
   const onClickDeleteHandler = (name) => {
     // console.log(name);
-    const filteredFruitListTest = fruitList.filter((fruit)=>fruit.name == name);    
-    console.log(filteredFruitListTest);
+    // const filteredFruitListTest = fruitList.filter((fruit)=>fruit.name == name);    
+    // console.log(filteredFruitListTest);
     const filteredFruitList = fruitList.filter((fruit)=>fruit.name != name);    
       console.log(filteredFruitList);
 

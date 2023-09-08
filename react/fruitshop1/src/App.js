@@ -4,29 +4,92 @@ import {useState} from 'react';
 
 function App() {
 
+  const [newFruit, setNewFruit] = useState(
+    {
+      name :  "",
+      price : "",
+      count : ""
+    }
+  );
   const [fruitList, setFruitList] = useState (
       [
         {
-          name : ' 기본이름1',
-          price : '기본값1',
-          count : '기본단위1'
+          name :  "사과",
+          price : "5000",
+          count : "15"
         },
         {
-          name : ' 기본이름2',
-          price : '기본값2',
-          count : '기본단위2'
+          name :  "오렌지",
+          price : "8000",
+          count : ""
         },
-
+        // 이 부분에 추가 될 예정 
       ]
   );
+  const Home = ()=>{
+    //홈
+    //과일목록보기
+    //과일추가
+    return (
+      <>
+        <h1>홈</h1>
+      <nav>
+        <ul>
+          <li><Link to="/list">과일목록보기</Link></li>
+          <li><Link to="/insert">과일추가</Link></li>
+        </ul>
+      </nav>
+      </>
+    );
+  }
+  const List = ()=>{
+    return (
+      <>
+        <h1>리스트</h1>
+      <nav>
+        <ul>
+          <li><Link to="/">홈으로</Link></li>
+          <li><Link to="/insert">과일추가</Link></li>
+        </ul>
+      </nav>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>이름</th>
+              <th>가격</th>
+              <th>수량</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              fruitList.map(
+                (fruit) => {
+                  return (
+                    <tr>
+                      <td>{fruit.name}</td>
+                      <td>{fruit.price}</td>
+                      <td>{fruit.amount}</td>
+                      <td><button onClick={() => {onClickDeleteHandler(fruit.name);} }>삭제</button></td>
+                    </tr>
+                  )
+                }
+              )
+            }
+          </tbody>
+        </table>
+      </div>
+      </>
+    )
+  }
 
-  const [newFruit, setNewFruit] = useState(
-    {
-      name : ' 기본이름3',
-      price : '기본값3',
-      count : '기본단위3'
-    }
-  );
+  const onClickDeleteHandler = (name) => {
+    const filteredFruitList = fruitList.filter((fruit)=>fruit.name != name);
+      console.log(filteredFruitList);
+
+    // 목록용 저장공간 fruitList
+    setFruitList(filteredFruitList);
+  }
 
   const insertHandler = () => {
     setFruitList([...fruitList, newFruit]);
@@ -50,19 +113,6 @@ function App() {
       </>
     )
   }  
-  const List = ()=>{
-    return (
-      <>
-        <h1>리스트</h1>
-      <nav>
-        <ul>
-          <li><Link to="/">홈으로</Link></li>
-          <li><Link to="/insert">과일추가</Link></li>
-        </ul>
-      </nav>
-      </>
-    )
-  }
 
   return (
     <BrowserRouter>
@@ -71,7 +121,7 @@ function App() {
         <Route path="/" element={<Home></Home>}/>
         <Route path="/list" element={<List></List>}/>
         <Route path="/insert" element={<InsertFruit></InsertFruit>}/>
-        <Route path="/delete" element={<DeleteFruit></DeleteFruit>}/>
+        <Route path="/delete" element=""/>
         <Route path="/info" element=""/>
         <Route path="/update" element=""/>
         </Routes>
@@ -79,41 +129,4 @@ function App() {
     </BrowserRouter>
   );
   }
-const Home = ()=>{
-  //홈
-  //과일목록보기
-  //과일추가
-  return (
-    <>
-      <h1>홈</h1>
-    <nav>
-      <ul>
-        <li><Link to="/list">과일목록보기</Link></li>
-        <li><Link to="/insert">과일추가</Link></li>
-      </ul>
-    </nav>
-    </>
-  );
-}
-
-
-const DeleteFruit = () => {
-  return (
-    <>
-    <h1>과일삭제</h1>
-    </>
-  )
-}
-
-// const Info = () => {
-//   return (
-//     <> 
-//     <h1>과일정보</h1>
-//     </>
-//   )
-// }
-
-// const 
-
-
 export default App;

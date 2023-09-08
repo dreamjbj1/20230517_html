@@ -12,19 +12,40 @@ import './App.css';
 // import SpreadOperator from './R011_SpreadOperator'
 // import ClassPrototype from './R012_Class&Prototype'
 // import ArrowFunc from './R013_ArrowFunction'
-import ForEach from './R014_ForEach'
-
+// import ForEach from './R014_ForEach'
+// import Map from './R015_Map'
+import Jquery from './R016_Jquery'
 
 function App() {
-// 14번
+// 16번
 return (
   <div className="App">
       <h1>Start React 200!</h1>
       <p>CSS 적용하기</p>
-      <ForEach/>
+      <Jquery/>
   </div>
 );
 } 
+
+// 15번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <Map/>
+//   </div>
+// );
+// } 
+
+// 14번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <ForEach/>
+//   </div>
+// );
+// } 
 
 // 13번
 // return (
