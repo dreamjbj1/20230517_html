@@ -8,7 +8,7 @@ url mapping 페이지 구성
 이름, 가격, 단위 == 과일 
 */
 function App() {
-  const [a1, setA1 ] = useState([10,20,30]); // 저장공간생성
+//  const [a1, setA1 ] = useState([10,20,30]); // 저장공간생성
 //  const [a, seta] = useState();
 
   // fruitList 이름의 저장공간 생성 선언
@@ -42,13 +42,12 @@ function App() {
     console.log("insertHandler 함수실행");
     console.log(newFruit); 
     // id 중복값 없게
+    // TODO 빈칸 없게
     // 기존 fruitList에 동일한 것이 없다면 추가
     setFruitList([...fruitList, newFruit]);
-    console.log("------ㄴ");
-    console.log(a1);
-    setA1([100,200,300]); // 바꾸고 싶은 값 지정
-    console.log(a1);
-    console.log("------ㄷ");
+    // setA1([100,200,300]); // 바꾸고 싶은 값 지정
+    console.log(setFruitList);
+   
    }
 
    
@@ -65,8 +64,8 @@ function App() {
     // const {n1} = props;
     // const {n2} = props;
     const {n1,n2} = props;
-    console.log(props.n1);
-    console.log(props.n2);
+    console.log(n1);
+    console.log(n2);
   
     // 리스트
     // 과일추가
@@ -89,7 +88,8 @@ function App() {
           </tr>
         </thead>
         <tbody>
-        {fruitList.map((fruit)=>{ 
+        {
+          fruitList.map((fruit)=>{ 
           console.log(fruit);
           return(
             <tr>
@@ -122,9 +122,9 @@ function App() {
       </nav>
       <div>
         <form>
-        <div><span>이름:</span><input type="text" name="name" onChange={onChangeInput} value={newFruit.name}></input></div>
-        <div><span>가격:</span><input type="text" name="price" onChange={onChangeInput} value={newFruit.price}></input></div>
-        <div><span>단위:</span><input type="text" name="count" onChange={onChangeInput} value={newFruit.count}></input></div>
+        <div><span>이름:</span><input type="text" onChange={onChangeInput} value={newFruit.name} name="name"></input></div>
+        <div><span>가격:</span><input type="text" onChange={onChangeInput} value={newFruit.price} name="price"></input></div>
+        <div><span>단위:</span><input type="text" onChange={onChangeInput} value={newFruit.count} name="count"></input></div>
         </form>
         <button onClick={insertHandler}>추가</button>
       </div>
@@ -165,10 +165,6 @@ const Home = ()=>{
     </>
   );
 }
-
-
-
-
 
 
 

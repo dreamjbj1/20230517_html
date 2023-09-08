@@ -8,19 +8,63 @@ import './App.css';
 // import LifecycleEx from './R007_LifecycleEx';
 // import LifecycleEx from './R008_LifecycleEx';
 // import Es6 from './R009_Es6'
-import Variable from './R010_Variable'
+// import Variable from './R010_Variable'
+// import SpreadOperator from './R011_SpreadOperator'
+// import ClassPrototype from './R012_Class&Prototype'
+// import ArrowFunc from './R013_ArrowFunction'
+import ForEach from './R014_ForEach'
+
 
 function App() {
- 
-// 10번
+// 14번
 return (
   <div className="App">
       <h1>Start React 200!</h1>
       <p>CSS 적용하기</p>
-      <Variable/>
+      <ForEach/>
   </div>
 );
-}
+} 
+
+// 13번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <ArrowFunc/>
+//   </div>
+// );
+// } 
+
+// 12번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <ClassPrototype/>
+//   </div>
+// );
+// } 
+
+// 11번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <SpreadOperator/>
+//   </div>
+// );
+// } 
+
+// 10번
+// return (
+//   <div className="App">
+//       <h1>Start React 200!</h1>
+//       <p>CSS 적용하기</p>
+//       <Variable/>
+//   </div>
+// );
+// }
 
 // 9번
 //    return (
